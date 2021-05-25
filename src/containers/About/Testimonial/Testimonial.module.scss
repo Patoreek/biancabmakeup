@@ -1,0 +1,44 @@
+@import "../../../sass/abstracts/variables";
+.testimonial {
+  margin: 20px 0px;
+  display: flex;
+  //background: pink;
+  .imageContainer {
+    &__image {
+      height: 400px;
+    }
+  }
+  .content {
+    padding: 25px;
+    &__quote {
+      font-size: 30px;
+      padding: 10px 0px;
+      width: 40vw;
+
+      .leftQuote {
+        width: 40px;
+        padding: 5px;
+        fill: $primary-color-dark;
+      }
+
+      .rightQuote {
+        width: 40px;
+        padding: 5px;
+        fill: $primary-color-dark;
+      }
+    }
+    &__name {
+      font-size: 16px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+  }
+  &__left {
+    justify-content: flex-start;
+    align-items: center;
+  }
+  &__right {
+    justify-content: flex-end;
+    align-items: center;
+  }
+}

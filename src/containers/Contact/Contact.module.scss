@@ -1,0 +1,100 @@
+@import "../../sass/abstracts/variables";
+
+.contact {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  &__left {
+    flex-basis: 60%;
+    height: 100%;
+    background: $primary-color-pink;
+    padding: 220px 150px;
+
+    h1 {
+      font-size: 150px;
+      color: $primary-color-light;
+      padding-bottom: 75px;
+    }
+
+    .socialsContainer {
+      .social {
+        display: flex;
+        flex-direction: column;
+        padding: 25px 0px;
+        &__label {
+          text-transform: uppercase;
+          font-size: 26px;
+          font-weight: 700;
+          color: $primary-color-dark;
+        }
+        &__link {
+          font-size: 26px;
+          padding: 10px 0px;
+          font-weight: 300;
+          color: $primary-color-dark;
+          text-decoration: none;
+          transition: 0.2s ease;
+          &:hover {
+            letter-spacing: 1px;
+            //text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  &__right {
+    flex-basis: 40%;
+    height: 100%;
+    background: $primary-color-light;
+
+    padding: 150px 50px;
+    h2 {
+      padding-bottom: 50px;
+      font-size: 100px;
+      transform: translateX(-225px);
+      color: $primary-color-dark;
+    }
+
+    .form {
+      padding: 0px 100px;
+      .input {
+        display: flex;
+        flex-direction: column;
+        padding: 15px 0px;
+        &__label {
+          text-transform: uppercase;
+          font-size: 18px;
+          font-weight: 600;
+          padding-bottom: 5px;
+        }
+        &__input {
+          font-size: 18px;
+          padding: 5px 10px;
+          border-radius: 0px;
+          border: 1px solid $primary-color-dark;
+          background: transparent;
+        }
+        &__textArea {
+          padding: 5px 10px;
+          border-radius: 0px;
+          font-size: 18px;
+
+          border: 1px solid $primary-color-dark;
+          background: transparent;
+          resize: none;
+        }
+
+        .sendBtn {
+          padding: 10px 15px;
+          font-size: 20px;
+          font-weight: 800;
+          text-transform: uppercase;
+          color: $primary-color-light;
+          background: $primary-color-pink;
+          border: none;
+          border-radius: 0px;
+        }
+      }
+    }
+  }
+}

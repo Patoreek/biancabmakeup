@@ -1,0 +1,88 @@
+@import "../../sass/abstracts/variables";
+
+.emptyContainer {
+  position: relative;
+  width: 100vw;
+  height: 500vh;
+  //background: orange;
+  //z-index: 10;
+}
+
+.gallery {
+  width: 100vw;
+  height: 100vh;
+  background: $primary-color-dark;
+  color: $primary-color-light;
+  display: flex;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 40;
+
+  .overlay {
+    position: fixed;
+    z-index: 45;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: linear-gradient(
+      180deg,
+      rgba($primary-color-dark, 0.35) 0%,
+      rgba(transparent, 0%) 2.5%,
+      rgba(transparent, 0) 2.5%,
+      rgba($primary-color-dark, 0.35) 100%
+    );
+  }
+  &__left {
+    width: 50vw;
+    height: 100vh;
+    //border-right: 2px solid white;
+    padding: 150px;
+    position: relative;
+    .title {
+      font-size: 150px;
+      font-weight: 400;
+      padding-bottom: 150px;
+    }
+
+    .content {
+      font-size: 30px;
+    }
+
+    .counter {
+      position: absolute;
+      bottom: 25px;
+      right: 50px;
+      display: flex;
+      align-items: center;
+      &__number {
+        font-size: 22px;
+      }
+      &__line {
+        width: 175px;
+        height: 3px;
+        background: #5f5d5d;
+        margin: 0px 25px;
+        .innerLine {
+          background: white;
+          width: 20%;
+          height: 100%;
+        }
+      }
+    }
+  }
+  &__right {
+    width: 50vw;
+    height: 100vh;
+    //padding: 25px;
+    display: flex;
+    .left {
+      transform: translateY(-400px);
+    }
+
+    .right {
+    }
+  }
+}

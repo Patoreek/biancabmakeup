@@ -1,0 +1,65 @@
+@import "../../sass/abstracts/variables";
+
+.footer {
+  height: 250px;
+  width: 100vw;
+  background: $primary-color-dark;
+  position: relative;
+  z-index: 240;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $primary-color-light;
+
+  .logo {
+    width: 200px;
+    height: 50px;
+    color: $primary-color-pink;
+    margin: 20px 0px 10px 0px;
+  }
+
+  .getInTouch {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .email {
+    color: $primary-color-light;
+    font-size: 18px;
+    padding-top: 10px;
+    font-weight: 600;
+    transform: 0.2s ease;
+
+    &:hover {
+      color: darken($primary-color-light, 5%);
+      //color: red;
+    }
+  }
+
+  .socials {
+    display: flex;
+    //background: orange;
+    width: 125px;
+    justify-content: space-evenly;
+    margin: 25px 0px;
+    &__social {
+      .icon {
+        width: 35px;
+        height: 35px;
+        fill: $primary-color-pink;
+        transition: 0.2s ease;
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+
+  .bottom {
+    span {
+      font-size: 14px;
+      text-transform: uppercase;
+      color: lighten($primary-color-dark, 25%);
+    }
+  }
+}

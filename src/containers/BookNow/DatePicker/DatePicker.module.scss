@@ -1,0 +1,30 @@
+@import "../../../sass/abstracts/variables";
+
+.datePicker {
+  .calendar {
+    background: $primary-color-dark;
+    color: $primary-color-light;
+
+    .react-calendar {
+      background: orange;
+    }
+  }
+  .react-calendar__month-view__days__day--weekend {
+    color: green !important;
+  }
+
+  .backBtnContainer {
+    display: flex;
+    justify-content: flex-end;
+    button {
+      padding: 10px 25px;
+      color: $primary-color-dark;
+      background: $primary-color-pink;
+      border: none;
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin: 25px 0px 0px 10px;
+    }
+  }
+}

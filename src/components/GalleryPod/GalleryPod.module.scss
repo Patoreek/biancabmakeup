@@ -1,0 +1,18 @@
+.galleryPod {
+  width: 23vw;
+  margin: 25px 10px;
+  display: flex;
+  .textContainer {
+    writing-mode: vertical-rl;
+    display: flex;
+    //background: red;
+    justify-content: space-around;
+    padding-left: 10px;
+    font-size: 17px;
+  }
+  .imageContainer {
+    img {
+      width: 100%;
+    }
+  }
+}

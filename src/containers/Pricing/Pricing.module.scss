@@ -1,0 +1,116 @@
+@import "../../sass/abstracts/variables";
+
+.pricingOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 400;
+}
+.pricingModal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 475px;
+  height: auto;
+  background: $primary-color-light;
+  border-radius: 3px;
+  z-index: 405;
+  display: flex;
+  flex-direction: column;
+  padding: 25px 25px;
+  &__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    fill: rgb(221, 221, 221);
+    transition: 0.2s ease;
+
+    &:hover {
+      fill: rgb(197, 197, 197);
+    }
+  }
+
+  &__title {
+    h1 {
+      text-transform: uppercase;
+      font-weight: 300;
+      font-size: 24px;
+    }
+  }
+
+  &__list {
+    padding: 25px 0px;
+    .listItem {
+      padding: 10px 0px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 18px;
+      &:not(:last-child) {
+        border-bottom: 1px solid black;
+      }
+      p {
+        font-weight: 300;
+      }
+      span {
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__message {
+    font-size: 12px;
+    color: grey;
+  }
+
+  &__bookNow {
+    padding: 25px 0px;
+    button {
+      width: 100%;
+      padding: 10px 0px;
+      border-radius: 0px;
+      border: none;
+      background: $primary-color-pink;
+      color: $primary-color-light;
+      font-size: 20px;
+      font-weight: 400;
+      text-transform: uppercase;
+      position: relative;
+      transition: 0.2s ease;
+
+      .booknow__1 {
+        position: absolute;
+        top: -1px;
+        left: 50;
+        opacity: 0;
+        transition: 0.2s ease;
+        //background: yellow;
+      }
+
+      .booknow__2 {
+        position: relative;
+        transition: 0.2s ease;
+        //background: orange;
+        opacity: 1;
+      }
+
+      &:hover {
+        .booknow__1 {
+          opacity: 1;
+          transform: translateY(9px);
+        }
+
+        .booknow__2 {
+          display: inline-block;
+          opacity: 0;
+          transform: translateY(13px);
+        }
+      }
+    }
+  }
+}

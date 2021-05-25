@@ -1,0 +1,155 @@
+@import "../../sass/abstracts/variables";
+@import "../../sass/abstracts/mixins";
+
+.banner {
+  width: 100vw;
+  height: 100vh;
+  background: $primary-color-dark;
+  color: white;
+  overflow: hidden;
+  position: fixed;
+  z-index: 200;
+  top: 0;
+  left: 0;
+
+  .bbTextBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 120%;
+    z-index: 150;
+    transform: scale(1.25);
+    //width: 100%;
+  }
+
+  .bbTextBg {
+  }
+
+  .logo {
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 5%;
+    }
+  }
+
+  .imageContainer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    width: 40vw;
+    height: 100vh;
+    background: orange;
+
+    &__image {
+      width: 100%;
+      object-fit: cover;
+      height: 100%;
+    }
+  }
+
+  .location {
+    position: absolute;
+    bottom: 30%;
+    left: 16%;
+    z-index: 200;
+    &__location {
+      font-size: 26px;
+      text-transform: uppercase;
+      color: $primary-color-green;
+      text-shadow: 5px 5px 5px rgba(black, 0.5);
+    }
+  }
+
+  .buttonsContainer {
+    position: absolute;
+    bottom: 17.5%;
+    left: 15.5%;
+    display: flex;
+    z-index: 200;
+    height: auto;
+    .button {
+      background: $primary-color-pink;
+      padding: 15px 20px;
+      margin: 0px 15px;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      align-items: center;
+      z-index: 505;
+      transition: 0.4s ease;
+      overflow: hidden;
+
+      &::before {
+        content: "";
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: #e8ac8e;
+      }
+
+      &__arrow1 {
+        width: 20px;
+        height: 16px;
+        fill: white;
+        transition: 0.2s ease;
+      }
+      &__arrow2 {
+        width: 20px;
+        height: 16px;
+        fill: white;
+        position: absolute;
+        top: 0;
+        left: 50;
+        transition: 0.2s ease;
+        opacity: 0;
+      }
+      &__bookNow1 {
+        font-size: 20px;
+        font-weight: 600;
+        color: white;
+        text-transform: uppercase;
+        transition: 0.2s ease;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        opacity: 1;
+      }
+      &__bookNow2 {
+        font-size: 20px;
+        font-weight: 600;
+        color: white;
+        text-transform: uppercase;
+        transition: 0.2s ease;
+        overflow: hidden;
+        position: absolute;
+        top: -15px;
+        left: 50;
+        opacity: 0;
+      }
+
+      &:hover {
+        .button__bookNow1 {
+          transform: translateY(30px);
+          opacity: 0;
+        }
+        .button__bookNow2 {
+          transform: translateY(30px);
+          opacity: 1;
+        }
+
+        .button__arrow1 {
+          transform: translateY(30px);
+          opacity: 0;
+        }
+        .button__arrow2 {
+          transform: translateY(18px);
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

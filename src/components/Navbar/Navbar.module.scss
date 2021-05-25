@@ -1,0 +1,185 @@
+@import "../../sass/abstracts/variables";
+
+.navbar {
+  //background: $primary-color-dark;
+  width: 100%;
+  //height: 30vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 310;
+  //z-index: 600;
+
+  &__circle {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border-radius: 1000px;
+    border: 2px solid $primary-color-pink;
+    transition: 0.3s ease;
+    z-index: 205;
+
+    &:hover {
+      background: $primary-color-pink;
+      transform: scale(0.8);
+    }
+  }
+
+  .darkNavCircle {
+    border: 2px solid $primary-color-dark !important;
+
+    &:hover {
+      background: $primary-color-dark !important;
+      transform: scale(0.8);
+    }
+  }
+
+  &__left {
+    padding-top: 260px;
+    bottom: 0px;
+    left: 0px;
+
+    .rotate {
+      width: 100%;
+      padding-top: 10px;
+      transform: rotate(-90deg);
+      transform-origin: 0% 0%;
+    }
+  }
+
+  .option {
+    padding: 0px 10px;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: $primary-color-pink;
+    position: relative;
+    transition: 0.3s ease;
+    z-index: 205;
+
+    .contact__1 {
+      display: inline-block;
+      position: relative;
+      transition: 0.3s ease;
+      z-index: 205;
+      opacity: 1;
+    }
+    .contact__2 {
+      position: absolute;
+      transition: 0.3s ease;
+      top: -20px;
+      left: 10px;
+      z-index: 202;
+      opacity: 0;
+    }
+    .pricing__1 {
+      display: inline-block;
+      position: relative;
+      transition: 0.3s ease;
+      z-index: 205;
+      opacity: 1;
+    }
+    .pricing__2 {
+      position: absolute;
+      transition: 0.3s ease;
+      top: -20px;
+      left: 10px;
+      z-index: 202;
+      opacity: 0;
+    }
+    .gallery__1 {
+      display: inline-block;
+      position: relative;
+      transition: 0.3s ease;
+      z-index: 205;
+      opacity: 1;
+    }
+    .gallery__2 {
+      position: absolute;
+      transition: 0.3s ease;
+      top: -20px;
+      left: 10px;
+      z-index: 202;
+      opacity: 0;
+    }
+    .bookNow__1 {
+      display: inline-block;
+      position: relative;
+      transition: 0.3s ease;
+      z-index: 205;
+      opacity: 1;
+    }
+    .bookNow__2 {
+      position: absolute;
+      transition: 0.3s ease;
+      top: -20px;
+      left: 10px;
+      z-index: 202;
+      opacity: 0;
+    }
+
+    &:hover {
+      .contact__1 {
+        transform: translateY(25px);
+        opacity: 0;
+      }
+      .contact__2 {
+        transform: translateY(20px);
+        opacity: 1;
+      }
+      .pricing__1 {
+        transform: translateY(25px);
+        opacity: 0;
+      }
+      .pricing__2 {
+        transform: translateY(20px);
+        opacity: 1;
+      }
+      .gallery__1 {
+        transform: translateY(25px);
+        opacity: 0;
+      }
+      .gallery__2 {
+        transform: translateY(20px);
+        opacity: 1;
+      }
+      .bookNow__1 {
+        transform: translateY(25px);
+        opacity: 0;
+      }
+      .bookNow__2 {
+        transform: translateY(20px);
+        opacity: 1;
+      }
+    }
+  }
+
+  .darkNav {
+    color: $primary-color-dark;
+  }
+
+  &__top {
+    position: absolute;
+    top: 10px;
+    left: 35px;
+    transform-origin: 0% 0%;
+  }
+
+  &__logo {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    .logo path {
+      width: 100%;
+      height: 100%;
+      fill: $primary-color-pink;
+    }
+
+    .darkNavLogo path {
+      fill: $primary-color-dark;
+    }
+  }
+}

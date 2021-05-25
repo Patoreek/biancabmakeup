@@ -1,0 +1,79 @@
+@import "../../sass/abstracts/variables";
+
+.welcomeScreenContainer {
+  position: absolute;
+  z-index: 250;
+  width: 100vw;
+  background: $primary-color-pink;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+
+  .welcomeScreenMain {
+    position: absolute;
+    z-index: 200;
+    width: 100vw;
+    //background: brown;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  .dropdown {
+    position: absolute;
+    z-index: 300;
+    width: 100vw;
+    background: $primary-color-dark;
+    background: transparent;
+    width: 100%;
+    height: 0%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+
+    &__left {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50vw;
+      height: 100%;
+      background: $primary-color-light;
+      border-right: 2px solid $primary-color-dark;
+    }
+    &__right {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50vw;
+      height: 100%;
+      background: $primary-color-light;
+      border-left: 2px solid $primary-color-dark;
+    }
+  }
+
+  .logo {
+    position: relative;
+    top: 50vh;
+    left: 50vw;
+    z-index: 200;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    z-index: 505;
+    &__pink {
+      z-index: 200;
+      path {
+        fill: $primary-color-pink;
+        stroke: none;
+      }
+    }
+
+    &__black {
+      z-index: 195;
+      path {
+        fill: $primary-color-dark;
+        stroke: none;
+      }
+    }
+  }
+}

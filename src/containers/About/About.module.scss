@@ -1,0 +1,174 @@
+@import "../../sass/abstracts/variables";
+.about {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  min-height: 300vh;
+  height: auto;
+  background: $primary-color-light;
+  z-index: 300;
+  padding: 100px 0px;
+  color: $primary-color-dark;
+  margin-top: 100vh;
+
+  .parralaxText {
+    position: absolute;
+    z-index: 50;
+
+    &__name {
+      top: 100px;
+      right: 0;
+    }
+  }
+
+  .parralaxImage {
+    position: absolute;
+    z-index: 40;
+  }
+
+  .name {
+    font-size: 150px;
+    text-transform: uppercase;
+    font-weight: 600;
+    position: absolute;
+    text-align: right;
+    right: 10vw;
+    top: 0;
+    z-index: 50;
+  }
+
+  .location {
+    font-size: 110px;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    position: absolute;
+    right: 10vw;
+    top: 12.5vh;
+    z-index: 50;
+  }
+
+  .makeup {
+    font-size: 100px;
+    text-transform: uppercase;
+    text-align: right;
+    margin-right: 10vw;
+    position: absolute;
+    top: 35vh;
+    right: 14vw;
+    z-index: 50;
+  }
+
+  .text {
+    font-size: 90px;
+    text-transform: uppercase;
+    text-align: right;
+    position: absolute;
+    top: 45vh;
+    right: 15vw;
+    z-index: 50;
+  }
+
+  .biancaImg {
+    height: 700px;
+    position: absolute;
+    top: 7.5vh;
+    left: 2.5vw;
+    z-index: 40;
+  }
+
+  .aboutMe {
+    width: 40vw;
+    position: absolute;
+    top: 60vh;
+    right: 15vw;
+    &__label {
+      font-size: 20px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    &__content {
+      font-size: 30px;
+      font-weight: 300;
+    }
+  }
+
+  .services {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px 35px;
+    position: relative;
+    top: 150vh;
+    //left: 15vw;
+    &__label {
+      font-size: 20px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    &__list {
+      columns: 2;
+      -webkit-columns: 2;
+      -moz-columns: 2;
+      &__item {
+        font-size: 30px;
+      }
+    }
+  }
+
+  .testimonials {
+    position: relative;
+    top: 170vh;
+    //background: green;
+    display: flex;
+    flex-direction: column;
+    width: 84vw;
+    margin: 0 auto;
+
+    &__label {
+      font-size: 20px;
+      text-transform: uppercase;
+      font-weight: 600;
+      padding-bottom: 50px;
+    }
+
+    &__testimonial {
+      display: flex;
+      .imageContainer {
+        &__image {
+          height: 200px;
+        }
+      }
+      .content {
+        padding: 25px;
+        &__quote {
+          font-size: 30px;
+          padding: 10px 0px;
+          width: 40vw;
+
+          .leftQuote {
+            width: 40px;
+            padding: 5px;
+            fill: $primary-color-dark;
+          }
+
+          .rightQuote {
+            width: 40px;
+            padding: 5px;
+            fill: $primary-color-dark;
+          }
+        }
+        &__name {
+          font-size: 16px;
+          text-transform: uppercase;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  .footerContainer {
+    position: absolute;
+    bottom: -250px;
+  }
+}
